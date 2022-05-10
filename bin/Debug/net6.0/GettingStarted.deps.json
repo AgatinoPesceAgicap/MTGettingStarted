@@ -8,16 +8,16 @@
     ".NETCoreApp,Version=v6.0": {
       "GettingStarted/1.0.0": {
         "dependencies": {
-          "MassTransit": "8.0.0",
+          "MassTransit.RabbitMQ": "8.0.2",
           "Microsoft.Extensions.Hosting": "6.0.0"
         },
         "runtime": {
           "GettingStarted.dll": {}
         }
       },
-      "MassTransit/8.0.0": {
+      "MassTransit/8.0.2": {
         "dependencies": {
-          "MassTransit.Abstractions": "8.0.0",
+          "MassTransit.Abstractions": "8.0.2",
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "3.1.18",
@@ -32,16 +32,28 @@
         },
         "runtime": {
           "lib/netstandard2.0/MassTransit.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
+            "assemblyVersion": "8.0.2.0",
+            "fileVersion": "8.0.2.0"
           }
         }
       },
-      "MassTransit.Abstractions/8.0.0": {
+      "MassTransit.Abstractions/8.0.2": {
         "runtime": {
           "lib/netstandard2.0/MassTransit.Abstractions.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
+            "assemblyVersion": "8.0.2.0",
+            "fileVersion": "8.0.2.0"
+          }
+        }
+      },
+      "MassTransit.RabbitMQ/8.0.2": {
+        "dependencies": {
+          "MassTransit": "8.0.2",
+          "RabbitMQ.Client": "6.2.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll": {
+            "assemblyVersion": "8.0.2.0",
+            "fileVersion": "8.0.2.0"
           }
         }
       },
@@ -412,6 +424,18 @@
           }
         }
       },
+      "RabbitMQ.Client/6.2.4": {
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.4.0"
+          }
+        }
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -439,6 +463,7 @@
           }
         }
       },
+      "System.Memory/4.5.4": {},
       "System.Reflection.Emit/4.7.0": {},
       "System.Reflection.Emit.Lightweight/4.7.0": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
@@ -468,19 +493,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "MassTransit/8.0.0": {
+    "MassTransit/8.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FhFiAQW1SrV9/8/kYaLoRkNNLVbMc+zDx1KOuALTJteGF4cRUW0NM98L39UBxvLHkyDarCl9tJkXt4XkUXL7OA==",
-      "path": "masstransit/8.0.0",
-      "hashPath": "masstransit.8.0.0.nupkg.sha512"
+      "sha512": "sha512-brFZt0n4gpLugboXVOephSOJIeV8mTgUafQL6LFlX429+1v66Xggj4jAHm8UZG2qRVQMfMsK6BSs6PbYb8fFvg==",
+      "path": "masstransit/8.0.2",
+      "hashPath": "masstransit.8.0.2.nupkg.sha512"
     },
-    "MassTransit.Abstractions/8.0.0": {
+    "MassTransit.Abstractions/8.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oGVhsfwPd1J5vpG9BBp9vdg6n+dXMbBKYvR1lWOMZb3xSOo4AgWCFsCfZfZffVvCLAqHmiZNbmRiFNJ5osSQ/w==",
-      "path": "masstransit.abstractions/8.0.0",
-      "hashPath": "masstransit.abstractions.8.0.0.nupkg.sha512"
+      "sha512": "sha512-v4g1FL8pUekQYhOsl6AX5edLV+X7ZBVG99+cDB+VGKX5wxhj/3hNldfyC37oIh7A9bzy3NKbtaus6Oh0CskbKw==",
+      "path": "masstransit.abstractions/8.0.2",
+      "hashPath": "masstransit.abstractions.8.0.2.nupkg.sha512"
+    },
+    "MassTransit.RabbitMQ/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wiWZ7Ax78whSDyC8DizqJHjSyl2ig5YV5f9pZrMyVMp7Q8LH0mbG0uiR6mW7rdd/PwGxRZYjkVnwSb2pI4Owhg==",
+      "path": "masstransit.rabbitmq/8.0.2",
+      "hashPath": "masstransit.rabbitmq.8.0.2.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",
@@ -678,6 +710,13 @@
       "path": "microsoft.extensions.primitives/6.0.0",
       "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
     },
+    "RabbitMQ.Client/6.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ttM7F+Ymb00EyQ25UCC44djr5GN/+cZNey2B3xD6JdJQQx7UcCtHdKBCE09zcmWuB+Afp07tFzetE14l/U8xQw==",
+      "path": "rabbitmq.client/6.2.4",
+      "hashPath": "rabbitmq.client.6.2.4.nupkg.sha512"
+    },
     "System.Diagnostics.DiagnosticSource/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -691,6 +730,13 @@
       "sha512": "sha512-lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
       "path": "system.diagnostics.eventlog/6.0.0",
       "hashPath": "system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
     },
     "System.Reflection.Emit/4.7.0": {
       "type": "package",

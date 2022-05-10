@@ -50,3 +50,5 @@ C:\Git Local Copy\mt\GettingStarted\obj\Debug\net6.0\refint\GettingStarted.dll
 C:\Git Local Copy\mt\GettingStarted\obj\Debug\net6.0\GettingStarted.pdb
 C:\Git Local Copy\mt\GettingStarted\obj\Debug\net6.0\GettingStarted.genruntimeconfig.cache
 C:\Git Local Copy\mt\GettingStarted\obj\Debug\net6.0\ref\GettingStarted.dll
+C:\Git Local Copy\mt\GettingStarted\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+C:\Git Local Copy\mt\GettingStarted\bin\Debug\net6.0\RabbitMQ.Client.dll
